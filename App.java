@@ -44,8 +44,8 @@ public class BrokenLinks {
 		System.out.println("Final Active Links in facebookHome page is :" + activeLinks.size());
 		for(int j=0;j<activeLinks.size();j++)
 		{
-			//HttpURLConnection connections = (HttpURLConnection) ((Object) new URL(activeLinks.get(j).getAttribute("href"), connections)).openConnections();
-			//connections.connect();
+			HttpURLConnection connections = (HttpURLConnection) ((Object) new URL(activeLinks.get(j).getAttribute("href"), connections)).openConnections();
+			connections.connect();
 			//String msg = connections.getResponseMessage();
 			//connections.disconnect();
 			//System.out.println(activeLinks.get(j).getAttribute("href") + "======>" + msg);
